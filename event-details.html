@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sharing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+        }
+
+
+        .navbar {
+            text-align: left;
+            margin: 0 0;
+            width: 100%;
+            background: black;
+        }
+
+        ul {
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+
+        li {
+            box-sizing: border-box;
+            list-style: none;
+            display: inline-block;
+            padding: 15px 20px;
+            margin: 0px;
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+
+        .leftalign {
+            width: 50%;
+            padding-left: 250px;
+            top: 10px;
+        }
+
+        ul li a {
+            text-transform: capitalize;
+            font-weight: 200;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-family: "Lato", sans-serif;
+            color: rgba(255, 255, 255, 0.83);
+            text-decoration: none;
+
+        }
+        ul li a:hover {
+            text-transform: capitalize;
+            font-weight: 200;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-family: "Lato", sans-serif;
+            color: rgba(25, 185, 248, 0.83);
+            text-decoration: none;
+
+        }
+       
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container1 {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+        }
+
+        .container1 .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500%;
+            height: 100%;
+            float: left;
+            animation: animate 10s linear infinite;
+
+        }
+
+        .container1 .slider .slide {
+            width: 20%;
+            height: 100%;
+            float: left;
+            position: relative;
+
+        }
+
+        .container1 .slider .slide .caption {
+            position: absolute;
+            top: 250px;
+            left: 60px;
+            right: 60px;
+            padding: 30px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .container1 .slider .slide .caption h2 {
+            margin: 0 0 20px;
+            padding: 20px;
+            color: #fff;
+            font-size: 48px;
+        }
+
+        .container1 .slider .slide .caption p {
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .slide1 {
+
+            background: url("https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/playlists/playlist_217/inspire_new_years_resolutions_1200x627.jpg?quality=89&w=800");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide2 {
+
+            background: url("http://innerprosperityacademy.com/wp-content/uploads/2014/10/5-ways-to-Skyrocket-your-Self-Confidence.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide3 {
+
+            background: url("https://www.thoughtco.com/thmb/v9W2JkQdjUPYkRI7ERcJRDPDEhw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-533301945-597bd11d054ad90011363b17.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide4 {
+
+            background: url("imageadmin/happiness.jpeg");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+
+        .card {
+            position: absolute;
+            background-color: black;
+            transform: translateY(-50%, -50%);
+            top: -23%;
+            width: 360px;
+            height: 500px;
+            border-radius: 8px;
+        }
+
+        .one {
+            padding-left: 400px;
+        }
+
+        .two {
+            padding-left: 800px;
+        }
+
+        .three {
+            padding-left: 1200px;
+        }
+
+        .card .image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+        }
+
+        .card .image img {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            border-radius: 8px;
+
+        }
+
+        .card:hover .image img {
+            opacity: 0.5;
+            transform: translateX(30%);
+
+        }
+
+        .card .details {
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 70%;
+            height: 100%;
+            background: black;
+            color: white;
+            transition: 0.5s;
+            transform: perspective(2000px) rotateY(-90deg);
+            transform-origin: left;
+
+        }
+
+        .card:hover .details {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+
+        .card .details button {
+            text-decoration: none;
+            background-color: rgb(116, 219, 13);
+            border: 1px solid rgb(116, 219, 13);
+            border-radius: 4px;
+            color: white;
+            padding: 10px;
+
+        }
+        .card .details button:hover{
+            box-shadow: 0 7px 10px 0 rgba(255,255,255,0.24), 0 10px 25px 0 rgba(255,255,255,0.19);
+            cursor:pointer;
+        }
+
+        .parallax-overlay {
+            background: -webkit-linear-gradient(left, rgba(52, 72, 128, 0.8), rgba(30, 207, 202, 0.8));
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 110%;
+
+
+        }
+
+        .parallax {
+            min-height: 110vh;
+            background: transparent;
+        }
+
+        #section2 {
+            height: 60;
+        }
+
+        .row .col-md-8 {
+            z-index: 2;
+            position: relative;
+            color: white;
+            min-height: 500px;
+            text-align: center;
+            padding-top: 270px;
+        }
+
+        .parallaxheading {
+            font-weight: 100 !important;
+            font-family: Lato;
+            line-height: 1.3;
+            font-size: 55px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .parallaxbutton {
+            background: #1ecfca;
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin: auto;
+            padding: 12px 28px;
+            border-radius: 8px;
+
+        }
+
+        .parallaxbutton:hover {
+            text-decoration: none;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li class="leftalign">
+                <img src="https://lh3.googleusercontent.com/tEIgrlc8OpRMq-znw4cy2A7iySpfxQgC1KBzl_kqPACM9pcEFL9MrOCDpvur840GhlAJZO9_=w16383" width="200px" height="45px">
+            </li>
+            <li width="10%"><a class="active" href="/member">About You</a></li>
+            <li width="10%"><a href="/core">Core Members</a></li>
+            <li width="10%"><a href="/goals">Our Goals</a></li>
+            <li width="10%"><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Contact Us</a></li>
+            <li width="10%"><a href="/login">SIGN-IN</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="container1">
+            <div class="slider">
+                <div class="slide slide1">
+                    <div class="caption">
+                        <h2>Aspire To Inspire</h2>
+                        <p>Every Accomplishment Start With The Decesion To Try</p>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="caption">
+                        <h2>Believe</h2>
+                        <p>Create the highest,grandest vision possible for your life, because you become what you are</p>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="caption">
+                        <h2>Conquer</h2>
+                        <p>You are stronger than you think</p>
+                    </div>
+                </div>
+                <div class="slide slide4">
+                    <div class="caption">
+                        <h2>Happiness</h2>
+                        <p>Happiness is a place between too much and too little</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="one">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://scontent.fdel1-2.fna.fbcdn.net/v/t1.0-9/40321103_2104306096310575_5169230888650670080_n.jpg?_nc_cat=101&_nc_ht=scontent.fdel1-2.fna&oh=b053dd205212e68b90818ef626ff9244&oe=5CB79D5A">
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Orientation</h1>
+                                    <p>Being the World’s largest student run entrepreneurship platform, Enactus is
+                                        spreading round the globe.
+                                        *Enactus Thapar* is organising an Orientation for all the first year students
+                                        in T105, T106 at 5:15pm on 30th August 2018. Don’t miss this opportunity. Hope
+                                        to see you all!</p>
+                                    <button class="button">Veiw more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="two">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://scontent.fdel1-3.fna.fbcdn.net/v/t1.0-9/49723838_2366291740112008_5405508270943109120_n.jpg?_nc_cat=106&_nc_ht=scontent.fdel1-3.fna&oh=29936f4ad25eb3a5cd8ba9ae33da932d&oe=5CBFCE6B">
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Enactus Day 2.0</h1>
+                                    <p>As we near 𝗘𝗻𝗮𝗰𝘁𝘂𝘀 𝗗𝗮𝘆 𝟮.𝟬, Enactus Thapar would like to unveil the
+                                        theme of the event.
+                                        𝙁𝙀𝙇𝙄𝘾𝙄𝙏𝘼𝙏𝙀𝙈, veraciously describes our endeavors which are aimed to
+                                        ensure delectation and contentment along with peace, prosperity and progress.
+                                        Let us come and work towards innovative and practical ways to foster
+                                        cooperation to secure social well being for all.</p>
+                                    <button onclick="window.location.href='/events'" class="button">Veiw more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="three">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://scontent.fdel1-3.fna.fbcdn.net/v/t1.0-9/41366315_2121542917920226_3951287375933472768_n.jpg?_nc_cat=111&_nc_ht=scontent.fdel1-3.fna&oh=c96ad8fd889f9d8c0cce6e35c4859920&oe=5CFD5B27">
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Recruitments</h1>
+                                    <p>We would like to thank you all for such an overwhelming response towards helping
+                                        to make the world a better place through entrepreneurial action.</p>
+                                    <button class="button">Veiw more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="http://www.keepspace.com.au/wp-content/uploads/2018/06/person-sat-reading-book-at-table.jpg">
+            <div class="parallax-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 mr-auto ml-auto text-center pt100 pb100">
+                            <h2 class="parallaxheading"> You're working with a<br> geniune society</h2>
+
+                            <a href="/sign-up" class="parallaxbutton">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

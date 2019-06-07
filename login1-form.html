@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=veiwport content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Login-Form</title>
+    <style>
+        body{
+            background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%, white 10% );
+        } 
+        .inline{
+            display:block;
+
+        }
+        .image{
+            float:left;
+        }
+        .form{
+            float:right;
+            padding-top:70px;
+            padding-right: 70px;
+        }
+        .text-name{
+            padding-bottom: 20px;
+        }
+        .button-line{
+        padding-top:30px;
+        text-align: center;
+        }
+        .heading{
+            padding-bottom:30px;
+            text-align: center;
+            color:white;
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+        .find{
+            padding-top:30px;
+            text-align: center;
+            color:rgba(255,255,255,0.6);
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .button2{
+            background-color:#00CC66;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 28px;
+            border-radius:8px;
+            color:white;
+            width:300px;
+            border: 2px solid #00CC66 ; 
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+        .button2:hover{
+            box-shadow: 0 5px 7px 0 rgba(255,255,255,0.1), 0 13px 15px 0 rgba(255,255,255,0.14);
+            cursor:pointer;
+            }
+            .admin{
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size:1.1rem;
+                font-family: "lato" sans-serif;
+                color:rgba(255,255,255,0.6);
+            }
+            .text-name input{
+            width:300px ;
+            color:#DCDCDC ;
+            margin-bottom: 20px;
+            }
+
+            .text-name input[type="name"]{
+                border:none;
+                border-bottom: 1px solid #fff;
+                background:transparent;
+                outline:none;
+                height:40px;
+            }
+            
+            .text-name input[type="email"]{
+                border:none;
+                border-bottom: 1px solid #fff;
+                background:transparent;
+                outline:none;
+                height:40px;
+            }
+            .text-name input[type="password"]{
+                border:none;
+                border-bottom: 1px solid #fff;
+                background:transparent;
+                outline:none;
+                height:40px;
+            }
+        
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+</head>
+
+<body>
+    <div class="inline" style="height:100%;width:100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+        <div class="image">
+            <img src="https://i.pinimg.com/originals/12/29/63/12296377abd74135c8a50dc29e2d2fe3.jpg" class="mySlides" style="height:100%;width:70%; position: absolute; top: 0; bottom: 0; left: 0; right: 0;transform:scale(1.1);">
+            <img src="https://i.pinimg.com/originals/79/59/c6/7959c685d2129f9022fd5fa877b6826d.jpg" class="mySlides" style="height:100%;width:70%; position: absolute; top: 0; bottom: 0; left: 0; right: 0;transform:scale(1.1);">
+            <img src="http://dubeat.com/wp-content/uploads/222B25F4-8415-4038-A4E9-291BB8AF20AA.jpeg" class="mySlides" style="height:100%;width:70%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; transform: scale(1.1)">
+        </div>
+        <div class="form">
+            <div class="heading">Login to continue</div>
+            <div class="text-name"><input type="name" id="userName"  placeholder="Enter Your Name" ></div>
+            <div class="text-name"><input type="email" id="userEmail"  placeholder="Enter Your Email" ></div>
+            <div class="text-name"><input type="password" id="userPassword"  placeholder="Password"></div>
+            <div class="member icon"><img src="https://png.pngtree.com/svg/20170721/administrators_352289.png" width="50px"
+                    height="50px" style="text-align:center; padding-left:130px;"></div>
+            <div class="admin"><input type="radio" name="userType" id="userType">Admin
+                <input type="radio" name="userType" id="userType">Member</div>
+                <div class="inline1" style="width:300px; display:block;">
+                        <div class="image1" style="float:left;color:rgba(255,255,255,0.6) ;font-family: sans-serif; padding-top:30px;"><input type="checkbox">Remember
+                            me</div>
+                        <div class="form1" style="float:right;color:rgba(255,255,255,0.6)	 ;font-family: sans-serif; padding-top:30px;"> Forgot password
+                        </div>
+                    </div>
+            <div class="button-line">
+                <input type="button" class="button2" id="login"  value="Login">
+            </div>
+            
+            <div class="find">Find More About Us</div>
+            <div class="links">
+                    <div class="link1" style=" padding-left:140px; padding-top:30px"><a href="https://twitter.com/Twitter"><img src="http://www.stickpng.com/assets/images/58e9196deb97430e819064f6.png" width="30px" height="30px" ></a>
+                </div>
+        </div>
+
+</body>
+<script src="js/login.js"></script>
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBhZqOv0JpYIAppH6Wkut90zbwAZo5k9rA",
+    authDomain: "enactus-project.firebaseapp.com",
+    databaseURL: "https://enactus-project.firebaseio.com",
+    projectId: "enactus-project",
+    storageBucket: "enactus-project.appspot.com",
+    messagingSenderId: "343121266338"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+</html>
